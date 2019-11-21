@@ -1,6 +1,8 @@
 from tkinter import *
 import pandas as pd 
 import backendcopy
+import psycopg2
+import lxml.etree as etree
 
 
 
@@ -46,6 +48,9 @@ def insert():
 
 def update():
     backendcopy.update(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get())
+    listbox.delete(0,END)
+    listbox.insert(END,'Data updated')
+    
 def delete():
     backendcopy.delete(selected_tuple[0])
 
@@ -53,6 +58,34 @@ def search_command():
     listbox.delete(0,END)
     for row in backendcopy.search(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get()):
         listbox.insert(END,' ',row)
+def dump_command():
+    listbox.delete(0,END)
+    listbox.insert(END,"xml file created")
+    
+    with open('productsdata.xml', 'w') as outfile:
+        conn = psycopg2.connect("dbname='postgres' user='postgres' password='postgres1984' host='localhost' port='5432'")
+        cur=conn.cursor()
+        cur.execute("SELECT query_to_xml('SELECT * FROM shopping', true, false, '')")
+        rows=cur.fetchall()
+   
+    #with open('data.xml', 'w') as outfile:
+        outfile.write('<?xml version="1.0" encoding="UTF-8?>\n')
+        #outfile.write('<price-tables>\n')
+        for row in rows:
+            outfile.write('  <price-tables>\n')
+            outfile.write('    <product-id>%s</product-id>\n' % row[0])
+            outfile.write('    <online-from>%s</online-from>\n' % row[1])
+            outfile.write('    <online-to>%s</online-to>\n' % row[2])
+            outfile.write('    <amount>%s</amount>\n' % row[3])
+            outfile.write('    <price-info>%s</price-info>\n' % row[4])
+            #outfile.write('  </price-table>\n')
+        outfile.write('</price-tables>\n')
+        conn.close()
+        #rows=cur.fetchall()
+
+   
+
+
 
     
 window=Tk()
@@ -101,6 +134,8 @@ b4=Button(frame2,text="Delete",font="Times 12",width=9,command=delete)
 b4.grid(row=4,column=4)
 b5=Button(frame2,text="Close",font="Times 12",width=9,command=window.destroy)
 b5.grid(row=4,column=5)
+b5=Button(frame2,text="Dump",font="Times 12",width=9,command=dump_command)
+b5.grid(row=4,column=6)
 
 frame3 = Frame(window)       
 frame3.pack()
