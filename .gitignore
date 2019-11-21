@@ -1,0 +1,6 @@
+extra.py
+*.xml
+*.csv
+*.pyc
+productdata.py
+importeddata.py
