@@ -3,9 +3,8 @@ import pandas as pd
 import backendcopy
 import psycopg2
 import lxml.etree as etree
-
-
-
+import os.path
+from os import path
 
 selected_tuple = None
 def get_selected_row(event):
@@ -58,36 +57,49 @@ def search_command():
     listbox.delete(0,END)
     for row in backendcopy.search(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get()):
         listbox.insert(END,' ',row)
+data1="""<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
+	<pricebook>
+		<header pricebook-id="belk-best-prices-usd">
+			<currency>USD</currency>
+			<display-name xml:lang="x-default">Best Price</display-name>
+			<description xml:lang="x-default">Best Price</description>
+			<online-flag>true</online-flag>
+			<parent>belk-regular-prices-usd</parent>
+		</header>"""
 def dump_command():
-    listbox.delete(0,END)
-    listbox.insert(END,"xml file created")
+    try:
+        conn = psycopg2.connect("dbname='postgres' user='postgres' password='postgres1984'")
+    except:
+        print (" ***  Can't able to connect database. *** ")
+        return False
     
-    with open('productsdata.xml', 'w') as outfile:
-        conn = psycopg2.connect("dbname='postgres' user='postgres' password='postgres1984' host='localhost' port='5432'")
-        cur=conn.cursor()
-        cur.execute("SELECT query_to_xml('SELECT * FROM shopping', true, false, '')")
-        row=cur.fetchall()
-   
-    #with open('data.xml', 'w') as outfile:
+    with open('data.xml', 'w') as outfile:
+        cursor  = conn.cursor()
+        cursor.execute("select * from  shopping")
+        rows = cursor.fetchall()
         outfile.write('<?xml version="1.0" encoding="UTF-8?>\n')
-        #outfile.write('<price-tables>\n')
-        for row in row:
-            outfile.write('  <price-tables>\n')
-            outfile.write('    <product-id>%s</product-id>\n' % row[0])
-            outfile.write('    <online-from>%s</online-from>\n' % row[1])
-            outfile.write('    <online-to>%s</online-to>\n' % row[2])
-            outfile.write('    <amount>%s</amount>\n' % row[3])
-            outfile.write('    <price-info>%s</price-info>\n' % row[4])
-            #outfile.write('  </price-table>\n')
-        outfile.write('</price-tables>\n')
-        conn.close()
-        #rows=cur.fetchall()
+        outfile.write(data1)
+        outfile.write("\n")
+        outfile.write(' <price-tables>\n')
+        for row in rows:
+            outfile.write('  <price-table product-id="%s">\n' %(row[0]))
+            outfile.write('     <online-from>%s</online-from>\n' % (row[1]))
+            outfile.write('     <online-to>%s</online-to>\n' % (row[2]))
+            outfile.write('     <amount quantity="1">%s</amount>\n' % (row[3]))
+            outfile.write('     <price-info>%s</priceinfo>\n' % (row[4]))
+            outfile.write('  </price-table>\n\n')
+        outfile.write('     </price-tables>\n')
+        outfile.write('    </pricebook>\n')
+        outfile.write(' </pricebooks>\n')
+        outfile.close()
+    if path.isfile('data.xml'):
+        listbox.delete(0,END)
+        listbox.insert(END,'File generated')
+    else:
+        listbox.delete(0,END)
+        listbox.insert(END,'File is not generated')
 
-   
 
-
-
-    
 window=Tk()
 frame1=Frame(window)
 frame1.pack()

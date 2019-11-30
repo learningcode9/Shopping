@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8?>
+<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
+	<pricebook>
+		<header pricebook-id="belk-best-prices-usd">
+			<currency>USD</currency>
+			<display-name xml:lang="x-default">Best Price</display-name>
+			<description xml:lang="x-default">Best Price</description>
+			<online-flag>true</online-flag>
+			<parent>belk-regular-prices-usd</parent>
+		</header>
+ <price-tables>
+  <price-table product-id="0438587905997">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80</amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906055">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906116">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906161">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906215">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906284">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906345">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906383">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906468">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">214.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906666">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906710">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906765">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906819">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906864">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906901">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906932">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587906987">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907038">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907083">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907090">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">179.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907113">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907137">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907151">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907175">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907199">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907212">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907229">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907243">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">196.80 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907359">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907380">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907410">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907441">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907465">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907519">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907533">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907557">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="0438587907571">
+     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-to>2018-11-25T04:59:00.000Z</online-to>
+     <amount quantity="1">164.00 </amount>
+     <price-info>18B8KFDB</priceinfo>
+  </price-table>
+
+  <price-table product-id="123456789112">
+     <online-from>2019-10-567</online-from>
+     <online-to>2019-10-12</online-to>
+     <amount quantity="1">1000</amount>
+     <price-info>KWS123BHK</priceinfo>
+  </price-table>
+
+     </price-tables>
+    </pricebook>
+ </pricebooks>
