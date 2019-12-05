@@ -1,15 +1,24 @@
-import pandas as pd 
 import xml.etree.ElementTree as ET
 from sqlalchemy import create_engine
-import csv
-import backendcopy
+import pandas as pd 
+import re
 
 engine=create_engine('postgresql://postgres:postgres1984@localhost:5432/postgres')
 conn=engine.connect()
-tree=ET.parse('finaloutput.xml')
+
+
+
+#lines = open('data.xml').readlines()
+#f=open('newfile1.xml', 'w+').writelines(lines[10:-2])
+with open('finaloutput_terrance.xml') as fi:  
+    f = fi.readlines() 
+    open('newfile1.xml','w+').writelines(f[10:-2])
+fi.close()
+
+tree=ET.parse('newfile1.xml')
 #print(type(tree))
 root=tree.getroot()
-print(root[0])
+print(root)
 
 df_columns=["product-id","online-from","online-to","amount","price-info"]
 df_rows=[]
@@ -33,20 +42,35 @@ for x in root.findall('price-table'):
                           'price-info':'priceinfo'}, 
                  inplace=True)
     
-    output.to_csv(r'C:\Users\Sravani\Desktop\productsdata.csv',index=False,header=True) 
+    #output.to_csv(r'C:\Users\Sravani\Desktop\productsdata.csv',index=False,header=True) 
+    
+    output.to_sql('newxml1',con=engine,if_exists='replace',index=False)
     
     
-    #print(output.info())
-#print(output.describe())
+  
 
 
-    output.to_sql('importeddata',con=engine,if_exists='replace',index=False)
+
     
     
-    conn.close()
-   # print(output)
-    #output.to_csv(r'C:\Users\Sravani\Desktop\export_dataframe.xml', index = None, header=True)
+   
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 

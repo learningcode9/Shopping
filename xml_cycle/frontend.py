@@ -1,6 +1,6 @@
 from tkinter import *
 import pandas as pd 
-import backendcopy
+import backend
 import psycopg2
 import lxml.etree as etree
 import os.path
@@ -28,34 +28,27 @@ def get_selected_row(event):
 def view_command():
     
     listbox.delete(0,END)
-   
-    
-    #listbox.insert(END,"\n")
-    for items in backendcopy.view():
-       
-        listbox.insert(END,' ',items)
+   #listbox.insert(END,"\n")
+    for items in backend.view():
+       listbox.insert(END,' ',items)
 
 def insert():
     if(product_id.get()=="" or date_from.get()=="" or date_to.get()=="" or amount.get()=="" or price_info.get()==""):
         pass
     else:
-        
-        backendcopy.insert(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get())
+        backend.insert(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get())
         listbox.delete(0,END)
         listbox.insert(END,(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get()))
 
-
 def update():
-    backendcopy.update(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get())
+    backend.update(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get())
     listbox.delete(0,END)
     listbox.insert(END,'Data updated')
-    
 def delete():
-    backendcopy.delete(selected_tuple[0])
-
+    backend.delete(selected_tuple[0])
 def search_command():
     listbox.delete(0,END)
-    for row in backendcopy.search(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get()):
+    for row in backend.search(product_id.get(),date_from.get(),date_to.get(),amount.get(),price_info.get()):
         listbox.insert(END,' ',row)
 data1="""<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
 	<pricebook>
@@ -75,7 +68,7 @@ def dump_command():
     
     with open('data.xml', 'w') as outfile:
         cursor  = conn.cursor()
-        cursor.execute("select * from  shopping")
+        cursor.execute("select * from  newxml")
         rows = cursor.fetchall()
         outfile.write('<?xml version="1.0" encoding="UTF-8?>\n')
         outfile.write(data1)
@@ -90,7 +83,7 @@ def dump_command():
             outfile.write('  </price-table>\n\n')
         outfile.write('     </price-tables>\n')
         outfile.write('    </pricebook>\n')
-        outfile.write(' </pricebooks>\n')
+        outfile.write('</pricebooks>\n')
         outfile.close()
     if path.isfile('data.xml'):
         listbox.delete(0,END)

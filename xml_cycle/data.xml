@@ -12,7 +12,7 @@
   <price-table product-id="0438587905997">
      <online-from>2018-11-19T05:01:00.000Z</online-from>
      <online-to>2018-11-25T04:59:00.000Z</online-to>
-     <amount quantity="1">214.80</amount>
+     <amount quantity="1">214.80 </amount>
      <price-info>18B8KFDB</priceinfo>
   </price-table>
 
@@ -143,7 +143,8 @@
   </price-table>
 
   <price-table product-id="0438587907090">
-     <online-from>2018-11-19T05:01:00.000Z</online-from>
+     <online-from>2018-11-19T05:01:00.000Z
+				</online-from>
      <online-to>2018-11-25T04:59:00.000Z</online-to>
      <amount quantity="1">179.00 </amount>
      <price-info>18B8KFDB</priceinfo>
@@ -268,13 +269,13 @@
      <price-info>18B8KFDB</priceinfo>
   </price-table>
 
-  <price-table product-id="123456789112">
-     <online-from>2019-10-567</online-from>
-     <online-to>2019-10-12</online-to>
+  <price-table product-id="1234567891">
+     <online-from>2012-9-12</online-from>
+     <online-to>2020-10-12</online-to>
      <amount quantity="1">1000</amount>
-     <price-info>KWS123BHK</priceinfo>
+     <price-info>JKERF2345</priceinfo>
   </price-table>
 
      </price-tables>
     </pricebook>
- </pricebooks>
+</pricebooks>
