@@ -269,11 +269,11 @@
      <price-info>18B8KFDB</priceinfo>
   </price-table>
 
-  <price-table product-id="1234567891">
-     <online-from>2012-9-12</online-from>
-     <online-to>2020-10-12</online-to>
+  <price-table product-id="12345678912">
+     <online-from>2019-11-19T05:01:00.000Z</online-from>
+     <online-to>2020-11-25T04:59:00.000Z</online-to>
      <amount quantity="1">1000</amount>
-     <price-info>JKERF2345</priceinfo>
+     <price-info>18B8KFDP</priceinfo>
   </price-table>
 
      </price-tables>

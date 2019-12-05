@@ -68,7 +68,7 @@ def dump_command():
     
     with open('data.xml', 'w') as outfile:
         cursor  = conn.cursor()
-        cursor.execute("select * from  newxml")
+        cursor.execute("select * from  xmldatatable")
         rows = cursor.fetchall()
         outfile.write('<?xml version="1.0" encoding="UTF-8?>\n')
         outfile.write(data1)

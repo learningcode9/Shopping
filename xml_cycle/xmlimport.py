@@ -12,10 +12,10 @@ conn=engine.connect()
 #f=open('newfile1.xml', 'w+').writelines(lines[10:-2])
 with open('finaloutput_terrance.xml') as fi:  
     f = fi.readlines() 
-    open('newfile1.xml','w+').writelines(f[10:-2])
+    open('extracteddata.xml','w+').writelines(f[10:-2])
 fi.close()
 
-tree=ET.parse('newfile1.xml')
+tree=ET.parse('extracteddata.xml')
 #print(type(tree))
 root=tree.getroot()
 print(root)
@@ -44,11 +44,10 @@ for x in root.findall('price-table'):
     
     #output.to_csv(r'C:\Users\Sravani\Desktop\productsdata.csv',index=False,header=True) 
     
-    output.to_sql('newxml1',con=engine,if_exists='replace',index=False)
+    output.to_sql('xmldatatable',con=engine,if_exists='replace',index=False)
     
     
   
-
 
 
     
